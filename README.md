@@ -1,5 +1,7 @@
 # DSG-TS
- Official implementation of "Interpretable Multi-Granularity Time-Series Generation via Decomposed Semantic Guidance"
+
+This repository implements a PyTorch-based time series generation and imputation system using an interpretable diffusion model framework. It supports multiple benchmark datasets for training and inference.
+
 ## Project Structure
 
 - `main.py` - Main training and generation entry script
@@ -27,7 +29,7 @@ pip install -r requirements.txt
 
 Download the dataset from https://huggingface.co/datasets/WinfredGe/TSFragment-600K and process it using the scripts under `Semantic_Decomposition` to generate the dataset required by this project.
 
-Place the processed dataset under 'Data/datasets/', and make sure the `data_root` paths in the configuration files point to this directory.
+Place the processed dataset under `Data/datasets/`, and make sure the `data_root` paths in the configuration files point to this directory.
 
 > Note: Dataset file names and formats should match the `name` parameter specified in the corresponding `Config/*.yaml` file.
 
@@ -118,3 +120,4 @@ To add new datasets or model variants:
 1. Add a new YAML configuration file under `Config/`
 2. Add the corresponding dataset files under `Data/datasets/`
 3. Extend model or dataset classes in `Models/interpretable_diffusion/` or `Utils/Data_utils/real_datasets.py`
+
